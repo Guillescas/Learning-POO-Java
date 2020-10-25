@@ -6,7 +6,9 @@ public class Main {
 
     c1.modelo = "Bic";
     c1.cor = "Azul";
-    c1.ponta = 0.5f;
+    // c1.ponta = 0.5f;
+    c1.carga = 80;
+    c1.tampada = false;
 
     c1.destampar();
     c1.status();
