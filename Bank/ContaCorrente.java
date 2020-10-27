@@ -87,7 +87,7 @@ public class ContaCorrente {
       this.setbalance(getbalance() + value);
       System.out.println("");
       System.out.println("Você depositou R$" + value);
-      System.out.println("Seu saldo atual é de R$ " + getbalance());
+      System.out.println("Seu saldo atual é de R$" + getbalance());
       System.out.println("");
     }
   }
@@ -105,7 +105,15 @@ public class ContaCorrente {
   }
 
   public void monthlyPayment() {
-    
+    if (this.getaccountType() == "CC") {
+      this.setbalance(getbalance() - 12);
+      System.out.println("");
+      System.out.println("Sua mensalidade foi paga. Seu saldo atual é de R$" + getbalance());
+    } else {
+      this.setbalance(getbalance() - 20);
+      System.out.println("");
+      System.out.println("Sua mensalidade foi paga. Seu saldo atual é de R$" + getbalance());
+    }
   }
 
   public ContaCorrente() {
@@ -131,6 +139,9 @@ public class ContaCorrente {
     c1.accountStatus();
     
     c1.getMoney(12);
+    c1.putMoney(12);
+
+    c1.monthlyPayment();
 
   }
 }
