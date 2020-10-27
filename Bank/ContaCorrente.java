@@ -93,7 +93,7 @@ public class ContaCorrente {
   }
 
   public void getMoney(float value) {
-    if (isStatus() == true && getbalance() > value) {
+    if (isStatus() == true && getbalance() >= value) {
       this.setbalance(getbalance() - value);
       System.out.println("");
       System.out.println("Você sacou R$" + value);
@@ -139,9 +139,18 @@ public class ContaCorrente {
     c1.accountStatus();
     
     c1.getMoney(12);
+    
     c1.putMoney(12);
 
     c1.monthlyPayment();
+
+    c1.closeAccount();
+
+    c1.getMoney(38);
+
+    c1.closeAccount();
+
+    c1.getMoney(38);
 
   }
 }
